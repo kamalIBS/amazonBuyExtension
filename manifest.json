@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "Product Purchase Extension",
+	"description": "This extension will make online purchase",
+	"version": "1.0",
+	"offline_enabled": true,
+    "browser_action": {
+		"default_title": "Product Purchase Extension 2",
+		"default_popup": "index.html",
+		"default_icon":"images/amazon-128.png"
+	},
+	"permissions": [
+		"activeTab",
+		"declarativeContent",
+		"storage"
+	],
+    "content_scripts": [
+    	{
+			"matches": ["https://*.amazon.com/*","http://*.amazon.com/*"],			
+			"js": ["content.js"],
+			"css": ["style.css"],
+			"run_at": "document_idle",
+			"all_frames": false		
+    	}
+	],
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	}
+}

@@ -1,0 +1,4 @@
+const requestPayload = {"correlationId" : "5d15ec5da0fdfc77a75e54b2","api_token" : "4D1khVpBizfYl6uto1AYCaBfHheJ3aRCZgKlVjPEG2OLncdKmN","reprocess" : true,"shippingAddress" : {"name" : "Alejandro Bustamante","email" : "aleplana97@gmail.com","street1" : "17101 SW 119th Ct","street2" : "","cityName" : "Miami","stateOrProvince" : "FL","phone" : "5555555555","postalCode" : "33177-2123","country" : "United States"},"purchaseInfo" : {"offerUrl" : "https://www.amazon.com/gp/offer-listing/0028626273/?ie=UTF8&f_usedVeryGood=true&m=A18OZMH8UQINVM","itemQuantity" : 1,"offerMax" : 7.176},"postBackUrl" : "http://order.submitapi.com/internal/order/notification/5d15ec5da0fdfc77a75e54b2","paymentTransactionId" : "73587279Y91242740","orderType" : "general","sale_tax_exempted" : false,"group" : "US"};
+chrome.storage.sync.set({'payLoad':requestPayload},function(){
+    console.log('payload saved to storage');
+});
