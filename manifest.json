@@ -17,9 +17,8 @@
 	],
     "content_scripts": [
     	{
-			"matches": ["https://*.amazon.com/*","http://*.amazon.com/*"],			
+			"matches": ["https://*.amazon.in/*","http://*.amazon.in/*","https://*.amazon.com/*","http://*.amazon.com/*"],
 			"js": ["lib/jquery-3.4.1.min.js","content.js"],
-			"css": ["style.css"],
 			"run_at": "document_idle",
 			"all_frames": false		
     	}
